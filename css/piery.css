@@ -291,7 +291,7 @@ ul {
 
 .animate-pop-in {
   opacity: 0;
-  animation: popIn 0.8s forwards;
+  animation: popIn 1.4s forwards; /*0.8*/
 }
 
 @keyframes popIn {
