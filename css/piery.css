@@ -254,6 +254,12 @@ ul {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, rgba(255, 107, 139, 0.8), rgba(255, 107, 139, 0.5));
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .hero-content {
@@ -270,7 +276,7 @@ ul {
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  animation: popIn 0.8s 0.4s forwards;
+  animation: popIn 1.2s 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .hero-subtitle {
@@ -279,7 +285,7 @@ ul {
   font-weight: 400;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  animation: popIn 0.8s 0.6s forwards;
+  animation: popIn 1.2s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .hero-buttons {
@@ -291,18 +297,30 @@ ul {
 
 .animate-pop-in {
   opacity: 0;
-  animation: popIn 0.8s forwards;
+  animation: popIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 @keyframes popIn {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
-  to {
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.btn-primary.animate-pop-in {
+  animation: popIn 1.2s 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.btn-secondary.animate-pop-in {
+  animation: popIn 1.2s 1.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .hero-scroll-indicator {
