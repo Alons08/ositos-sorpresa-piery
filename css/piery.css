@@ -3,7 +3,7 @@
   --primary: #FF6B8B;
   --primary-dark: #E05575;
   --secondary: #FFD166;
-  --accent: #06D6A0;
+  --accent: #4FC3F7;
   --dark: #2B2D42;
   --light: #F8F9FA;
   --white: #FFFFFF;
@@ -448,7 +448,7 @@ ul {
 }
 
 .package-features i {
-  color: var(--primary);
+  color: var(--accent);
   font-size: 1.1rem;
   margin-top: 3px;
 }
